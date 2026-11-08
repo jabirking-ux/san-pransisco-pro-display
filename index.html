@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>San Pransisco Pro Display — 100% Metric-Compatible Alternative to SF Pro Display</title>
-  <meta name="description" content="A 100% metric-compatible, legally clean, open-source drop-in alternative to Apple's SF Pro Display. Zero line-wrap shifts.">
+  <title>San Pransisco Pro Display — 1:1 Metric-Compatible Alternative to SF Pro Display</title>
+  <meta name="description" content="100% metric-compatible, legally clean, open-source drop-in alternative to Apple's SF Pro Display. Zero line-wrap shifts.">
   <link rel="stylesheet" href="san-pransisco.css">
   <style>
     :root {
-      --bg: #0b0d12;
+      --bg: #0a0c10;
       --bg-panel: #11141c;
       --border: #222838;
       --border-focus: #3b4664;
@@ -19,6 +19,10 @@
       --text-dim: #545868;
       --success: #30d158;
       --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      
+      /* Liquid Glass Light Coordinates */
+      --mouse-x: 50%;
+      --mouse-y: 50%;
     }
 
     * {
@@ -30,14 +34,15 @@
     body {
       background-color: var(--bg);
       background-image: 
-        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
       background-size: 40px 40px;
       color: var(--text);
       font-family: 'San Pransisco Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       line-height: 1.5;
       -webkit-font-smoothing: antialiased;
       padding-bottom: 80px;
+      overflow-x: hidden;
     }
 
     .container {
@@ -49,8 +54,8 @@
     /* Top Navigation */
     nav {
       border-bottom: 1px solid var(--border);
-      background: rgba(11, 13, 18, 0.85);
-      backdrop-filter: blur(12px);
+      background: rgba(10, 12, 16, 0.88);
+      backdrop-filter: blur(16px);
       position: sticky;
       top: 0;
       z-index: 100;
@@ -99,7 +104,7 @@
     }
 
     .btn-github {
-      background: #1c2232;
+      background: #191f2d;
       border: 1px solid var(--border);
       color: #fff;
       padding: 7px 14px;
@@ -114,13 +119,13 @@
     }
 
     .btn-github:hover {
-      background: #252d42;
+      background: #232b3e;
       border-color: var(--accent);
     }
 
-    /* Hero */
+    /* Hero Section */
     header {
-      padding: 80px 0 60px;
+      padding: 80px 0 50px;
       text-align: left;
     }
 
@@ -144,7 +149,7 @@
     .hero-desc {
       font-size: 20px;
       color: var(--text-muted);
-      max-width: 760px;
+      max-width: 780px;
       line-height: 1.5;
       font-weight: 400;
       margin-bottom: 32px;
@@ -188,17 +193,102 @@
       border-color: var(--border-focus);
     }
 
+    /* ==========================================================================
+       REAL LIQUID GLASS (Optical Refraction & Distortion Engine)
+       ========================================================================== */
+    .liquid-glass-card {
+      position: relative;
+      background: rgba(17, 20, 28, 0.75);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      padding: 32px;
+      overflow: hidden;
+      box-shadow: 
+        0 30px 60px rgba(0, 0, 0, 0.5),
+        inset 0 1px 0 rgba(255, 255, 255, 0.12),
+        inset 0 0 20px rgba(255, 255, 255, 0.02);
+      backdrop-filter: blur(24px) saturate(140%);
+    }
+
+    /* Optical Caustic Specular Flare */
+    .liquid-glass-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(
+        800px circle at var(--mouse-x) var(--mouse-y),
+        rgba(255, 255, 255, 0.08) 0%,
+        rgba(41, 151, 255, 0.04) 40%,
+        transparent 70%
+      );
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+      z-index: 1;
+    }
+
+    /* Liquid Refraction Rim */
+    .liquid-glass-card::after {
+      content: '';
+      position: absolute;
+      inset: -1px;
+      border-radius: 21px;
+      padding: 1px;
+      background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.25) 0%,
+        rgba(41, 151, 255, 0.2) 30%,
+        rgba(255, 255, 255, 0.03) 70%,
+        rgba(255, 255, 255, 0.15) 100%
+      );
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    /* Interactive Liquid Glass Refractor Lens (Floating Glass Orb) */
+    .lens-wrapper {
+      position: fixed;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      z-index: 9999;
+      opacity: 0;
+      transition: opacity 0.25s ease;
+      box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.6),
+        inset 0 2px 4px rgba(255, 255, 255, 0.5),
+        inset 0 -4px 10px rgba(0, 0, 0, 0.4),
+        0 0 0 1px rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(2px) contrast(1.15) brightness(1.1);
+      /* Apply SVG Optical Refraction Filter */
+      filter: url(#lens-refraction);
+    }
+
+    .lens-wrapper.active {
+      opacity: 1;
+    }
+
+    .lens-highlight {
+      position: absolute;
+      top: 15%;
+      left: 20%;
+      width: 35%;
+      height: 25%;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0) 80%);
+      transform: rotate(-30deg);
+      pointer-events: none;
+    }
+
     /* Interactive Type Tester Panel */
     .tester-section {
       margin-bottom: 80px;
-    }
-
-    .panel {
-      background: var(--bg-panel);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 28px;
-      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+      position: relative;
+      z-index: 10;
     }
 
     .panel-header {
@@ -210,19 +300,24 @@
       border-bottom: 1px solid var(--border);
       padding-bottom: 20px;
       margin-bottom: 24px;
+      position: relative;
+      z-index: 5;
     }
 
     .panel-title {
       font-size: 15px;
       font-weight: 600;
       letter-spacing: -0.01em;
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
 
     .controls-row {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      gap: 18px;
+      gap: 16px;
     }
 
     .control-item {
@@ -247,7 +342,7 @@
     input[type="range"] {
       accent-color: var(--accent);
       cursor: pointer;
-      width: 100px;
+      width: 90px;
     }
 
     .toggle-pill {
@@ -276,15 +371,17 @@
       word-break: break-word;
       transition: font-size 0.1s ease;
       font-weight: 700;
-      font-size: 48px;
+      font-size: 54px;
       line-height: 1.15;
       letter-spacing: -0.025em;
       padding: 10px 0;
+      position: relative;
+      z-index: 5;
     }
 
     /* Comparison Visuals Section */
     .section-title {
-      font-size: 28px;
+      font-size: 30px;
       font-weight: 700;
       letter-spacing: -0.02em;
       margin-bottom: 12px;
@@ -294,15 +391,15 @@
       color: var(--text-muted);
       font-size: 16px;
       margin-bottom: 30px;
-      max-width: 700px;
+      max-width: 720px;
     }
 
     .comparison-img-card {
-      background: var(--bg-panel);
       border: 1px solid var(--border);
-      border-radius: 16px;
+      border-radius: 18px;
       overflow: hidden;
       margin-bottom: 36px;
+      background: var(--bg-panel);
     }
 
     .comparison-img-card img {
@@ -312,13 +409,14 @@
     }
 
     .img-caption {
-      padding: 14px 20px;
+      padding: 14px 22px;
       font-size: 13px;
       color: var(--text-muted);
       border-top: 1px solid var(--border);
       background: #0e1118;
       display: flex;
       justify-content: space-between;
+      align-items: center;
     }
 
     /* Metrics Table */
@@ -454,6 +552,31 @@
 </head>
 <body>
 
+  <!-- ========================================================================
+       SVG REFRACTION & OPTICAL DISPLACEMENT ENGINE (Real Liquid Glass)
+       ======================================================================== -->
+  <svg style="position: absolute; width: 0; height: 0; overflow: hidden;" aria-hidden="true">
+    <defs>
+      <!-- Optical Refraction Filter for Liquid Glass Lens -->
+      <filter id="lens-refraction" x="-30%" y="-30%" width="160%" height="160%">
+        <!-- Radial liquid bulge displacement -->
+        <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" result="noise" />
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="22" xChannelSelector="R" yChannelSelector="G" result="displaced" />
+        <!-- Caustic specular reflection -->
+        <feSpecularLighting in="noise" surfaceScale="2" specularConstant="1.4" specularExponent="25" lighting-color="#ffffff" result="spec">
+          <fePointLight x="80" y="50" z="200" />
+        </feSpecularLighting>
+        <feComposite in="spec" in2="displaced" operator="in" result="highlight" />
+        <feBlend in="displaced" in2="highlight" mode="screen" />
+      </filter>
+    </defs>
+  </svg>
+
+  <!-- Interactive Liquid Glass Refractor Lens (Floating Glass Orb) -->
+  <div id="liquidLens" class="lens-wrapper">
+    <div class="lens-highlight"></div>
+  </div>
+
   <nav>
     <div class="container nav-inner">
       <div class="nav-brand">
@@ -489,11 +612,14 @@
       </div>
     </header>
 
-    <!-- Interactive Type Tester -->
+    <!-- Interactive Type Tester Panel (Crafted in Real Liquid Glass) -->
     <section id="tester" class="tester-section">
-      <div class="panel">
+      <div class="liquid-glass-card">
         <div class="panel-header">
-          <div class="panel-title">Interactive Display Specimen</div>
+          <div class="panel-title">
+            <span>Interactive Display Specimen</span>
+            <span class="pill-exact">LIVE TESTER</span>
+          </div>
           <div class="controls-row">
             <div class="control-item">
               <label for="weightSelect">Weight</label>
@@ -511,8 +637,8 @@
             </div>
 
             <div class="control-item">
-              <label for="sizeSlider">Size: <span id="sizeVal">56</span>px</label>
-              <input type="range" id="sizeSlider" min="16" max="120" value="56">
+              <label for="sizeSlider">Size: <span id="sizeVal">54</span>px</label>
+              <input type="range" id="sizeSlider" min="16" max="120" value="54">
             </div>
 
             <div class="control-item">
@@ -521,6 +647,7 @@
             </div>
 
             <button id="italicToggle" class="toggle-pill">Italic</button>
+            <button id="lensToggle" class="toggle-pill active">Liquid Lens: ON</button>
             <button id="compareToggle" class="toggle-pill">Compare System Font</button>
           </div>
         </div>
@@ -534,13 +661,13 @@ Zero line-wrap deviation on Windows & Web.</div>
     <section id="comparison">
       <h2 class="section-title">Forensic Visual Comparisons</h2>
       <p class="section-sub">
-        Rendered from master OpenType binaries at identical pixel dimensions. Notice the exact baseline alignment, glyph bounds, and zero line-wrap shifts.
+        Rendered directly from master OpenType binaries at identical pixel dimensions. Notice the exact baseline alignment, glyph bounds, and zero line-wrap shifts.
       </p>
 
       <div class="comparison-img-card">
         <img src="docs/images/comparison-specimen.png" alt="Side-by-side rendering test: SF Pro Display vs San Pransisco Pro Display">
         <div class="img-caption">
-          <span>Side-by-side specimen comparison across titles, subtitles, alphabets, and paragraph stacks.</span>
+          <span>Side-by-side specimen comparison across titles, subtitles, alphabets, numbers, and paragraph stacks.</span>
           <span class="pill-exact">100% PARITY</span>
         </div>
       </div>
@@ -558,7 +685,7 @@ Zero line-wrap deviation on Windows & Web.</div>
     <section>
       <h2 class="section-title">Metric Table Parity</h2>
       <p class="section-sub">
-        Measured on the master 2048 Units-Per-Em grid across Apple SF Pro Display (v13.0d3e20) and San Pransisco Pro Display:
+        Measured on the master 2048 Units-Per-Em coordinate grid across Apple SF Pro Display (v13.0d3e20) and San Pransisco Pro Display:
       </p>
 
       <div class="table-container">
@@ -631,7 +758,7 @@ Zero line-wrap deviation on Windows & Web.</div>
     <section id="weights">
       <h2 class="section-title">Download Available Weights</h2>
       <p class="section-sub">
-        Full 18-style suite available in TrueType (desktop) and WOFF2 (web):
+        Full 18-style family available in TrueType (desktop) and WOFF2 (web):
       </p>
 
       <div class="styles-grid">
@@ -751,9 +878,12 @@ h1, h2, h3, .display {
     const trackingVal = document.getElementById('trackingVal');
     const italicToggle = document.getElementById('italicToggle');
     const compareToggle = document.getElementById('compareToggle');
+    const lensToggle = document.getElementById('lensToggle');
+    const liquidLens = document.getElementById('liquidLens');
 
     let isItalic = false;
     let isCompare = false;
+    let lensActive = true;
 
     function updateType() {
       typeOutput.style.fontWeight = weightSelect.value;
@@ -783,6 +913,35 @@ h1, h2, h3, .display {
       compareToggle.classList.toggle('active', isCompare);
       compareToggle.textContent = isCompare ? "Comparing: System Font" : "Compare System Font";
       updateType();
+    });
+
+    lensToggle.addEventListener('click', () => {
+      lensActive = !lensActive;
+      lensToggle.classList.toggle('active', lensActive);
+      lensToggle.textContent = lensActive ? "Liquid Lens: ON" : "Liquid Lens: OFF";
+      if (!lensActive) {
+        liquidLens.classList.remove('active');
+      }
+    });
+
+    // Real Liquid Glass Cursor Dynamics & Refraction Lighting
+    window.addEventListener('mousemove', (e) => {
+      const x = e.clientX;
+      const y = e.clientY;
+      
+      // Update global CSS custom properties for card caustics
+      document.documentElement.style.setProperty('--mouse-x', `${x}px`);
+      document.documentElement.style.setProperty('--mouse-y', `${y}px`);
+
+      if (lensActive) {
+        liquidLens.style.left = `${x}px`;
+        liquidLens.style.top = `${y}px`;
+        liquidLens.classList.add('active');
+      }
+    });
+
+    window.addEventListener('mouseleave', () => {
+      liquidLens.classList.remove('active');
     });
 
     updateType();
