@@ -6,6 +6,7 @@ __pycache__/
 # Temporary downloads and proprietary reference binaries
 references/
 inter_extracted/
+releases/
 *.otf
 test_*.ttf
 

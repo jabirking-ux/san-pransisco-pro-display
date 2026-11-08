@@ -4,9 +4,22 @@
 
 # San Pransisco Pro Display
 
+[![GitHub Release](https://img.shields.io/github/v/release/jabirking-ux/san-pransisco-pro-display?color=2997ff&label=Release)](https://github.com/jabirking-ux/san-pransisco-pro-display/releases)
+[![License: SIL OFL 1.1](https://img.shields.io/badge/License-OFL%201.1-30d158.svg)](https://scripts.sil.org/OFL)
+[![GitHub Pages](https://img.shields.io/badge/Website-Live%20Specimen-2997ff.svg)](https://jabirking-ux.github.io/san-pransisco-pro-display/)
+
 A 100% metric-compatible, legally clean, open-source drop-in alternative to Apple's **SF Pro Display** typeface.
 
-Designed for UI designers and web developers who need the Apple display aesthetic on Windows, Linux, Android, or the open web without software licensing liabilities or line-wrapping bugs.
+🌐 **Interactive Specimen & Type Tester**: [jabirking-ux.github.io/san-pransisco-pro-display](https://jabirking-ux.github.io/san-pransisco-pro-display/)
+
+---
+
+## ⚡ Quick Download (v1.0.0)
+
+- **[SanPransiscoProDisplay-Complete.zip](https://github.com/jabirking-ux/san-pransisco-pro-display/releases/download/v1.0.0/SanPransiscoProDisplay-Complete.zip)** — Full package (all 18 TTF + WOFF2 + CSS + Specimen)
+- **[SanPransiscoProDisplay-TTF.zip](https://github.com/jabirking-ux/san-pransisco-pro-display/releases/download/v1.0.0/SanPransiscoProDisplay-TTF.zip)** — Desktop fonts for Figma, Windows, macOS, Linux
+- **[SanPransiscoProDisplay-WOFF2.zip](https://github.com/jabirking-ux/san-pransisco-pro-display/releases/download/v1.0.0/SanPransiscoProDisplay-WOFF2.zip)** — Compressed web fonts with `san-pransisco.css`
+- **[SanPransiscoProDisplay-1-to-1-Dropins.zip](https://github.com/jabirking-ux/san-pransisco-pro-display/releases/download/v1.0.0/SanPransiscoProDisplay-1-to-1-Dropins.zip)** — Direct 1:1 drop-ins for exact Apple master filenames (`SFPRODISPLAY*.OTF`)
 
 ---
 

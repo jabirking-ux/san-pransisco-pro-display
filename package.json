@@ -1,0 +1,32 @@
+{
+  "name": "san-pransisco-pro-display",
+  "version": "1.0.0",
+  "description": "100% metric-compatible, legally clean open-source alternative to Apple's SF Pro Display",
+  "main": "san-pransisco.css",
+  "style": "san-pransisco.css",
+  "files": [
+    "dist/ttf",
+    "dist/woff2",
+    "dist/user_exact",
+    "san-pransisco.css",
+    "OFL.txt",
+    "README.md"
+  ],
+  "keywords": [
+    "font",
+    "sf-pro",
+    "sf-pro-display",
+    "san-francisco",
+    "typeface",
+    "typography",
+    "open-source",
+    "metric-compatible"
+  ],
+  "author": "Antigravity Typographic Labs",
+  "license": "OFL-1.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jabirking-ux/san-pransisco-pro-display.git"
+  },
+  "homepage": "https://jabirking-ux.github.io/san-pransisco-pro-display/"
+}
