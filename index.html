@@ -39,6 +39,26 @@
       cursor: url('assets/cursors/pointinghand.svg') 12 8, url('assets/cursors/pointinghand.png') 12 8, pointer;
     }
 
+    input[type="text"], textarea, pre, code, [contenteditable="true"] {
+      cursor: url('assets/cursors/ibeamvertical.svg') 11 10, url('assets/cursors/ibeamvertical.png') 11 10, text;
+    }
+
+    input[type="range"]::-webkit-slider-thumb, .draggable {
+      cursor: url('assets/cursors/openhand.svg') 15 16, url('assets/cursors/openhand.png') 15 16, grab;
+    }
+
+    input[type="range"]:active::-webkit-slider-thumb, .draggable:active {
+      cursor: url('assets/cursors/closedhand.svg') 15 16, url('assets/cursors/closedhand.png') 15 16, grabbing !important;
+    }
+
+    .forensic-inspect {
+      cursor: url('assets/cursors/cross.svg') 11 11, url('assets/cursors/cross.png') 11 11, crosshair;
+    }
+
+    [disabled], .disabled {
+      cursor: url('assets/cursors/notallowed.svg') 5 5, url('assets/cursors/notallowed.png') 5 5, not-allowed !important;
+    }
+
     body {
       background-color: var(--bg);
       background-image: 
