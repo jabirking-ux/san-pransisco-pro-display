@@ -1,0 +1,16 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Temporary downloads and proprietary reference binaries
+references/
+inter_extracted/
+*.otf
+test_*.ttf
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

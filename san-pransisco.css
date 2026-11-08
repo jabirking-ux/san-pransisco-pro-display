@@ -1,0 +1,242 @@
+/**
+ * San Pransisco Pro Display
+ * The Closest Legal, Clean-Room Alternative to SF Pro Display
+ * 100% Metric-Compatible Optical Display Sans-Serif
+ * Licensed under the SIL Open Font License, Version 1.1
+ */
+
+/* ==========================================================================
+   Roman Weights
+   ========================================================================== */
+
+/* 100 - Thin */
+@font-face {
+  font-family: 'San Pransisco Pro Display';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url('dist/woff2/SanPransiscoProDisplay-Thin.woff2') format('woff2'),
+       url('dist/ttf/SanPransiscoProDisplay-Thin.ttf') format('truetype');
+}
+
+/* 200 - Ultralight */
+@font-face {
+  font-family: 'San Pransisco Pro Display';
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url('dist/woff2/SanPransiscoProDisplay-Ultralight.woff2') format('woff2'),
+       url('dist/ttf/SanPransiscoProDisplay-Ultralight.ttf') format('truetype');
+}
+
+/* 300 - Light */
+@font-face {
+  font-family: 'San Pransisco Pro Display';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('dist/woff2/SanPransiscoProDisplay-Light.woff2') format('woff2'),
+       url('dist/ttf/SanPransiscoProDisplay-Light.ttf') format('truetype');
+}
+
+/* 400 - Regular */
+@font-face {
+  font-family: 'San Pransisco Pro Display';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('dist/woff2/SanPransiscoProDisplay-Regular.woff2') format('woff2'),
+       url('dist/ttf/SanPransiscoProDisplay-Regular.ttf') format('truetype');
+}
+
+/* 500 - Medium */
+@font-face {
+  font-family: 'San Pransisco Pro Display';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('dist/woff2/SanPransiscoProDisplay-Medium.woff2') format('woff2'),
+       url('dist/ttf/SanPransiscoProDisplay-Medium.ttf') format('truetype');
+}
+
+/* 600 - Semibold */
+@font-face {
+  font-family: 'San Pransisco Pro Display';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('dist/woff2/SanPransiscoProDisplay-Semibold.woff2') format('woff2'),
+       url('dist/ttf/SanPransiscoProDisplay-Semibold.ttf') format('truetype');
+}
+
+/* 700 - Bold */
+@font-face {
+  font-family: 'San Pransisco Pro Display';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('dist/woff2/SanPransiscoProDisplay-Bold.woff2') format('woff2'),
+       url('dist/ttf/SanPransiscoProDisplay-Bold.ttf') format('truetype');
+}
+
+/* 800 - Heavy */
+@font-face {
+  font-family: 'San Pransisco Pro Display';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url('dist/woff2/SanPransiscoProDisplay-Heavy.woff2') format('woff2'),
+       url('dist/ttf/SanPransiscoProDisplay-Heavy.ttf') format('truetype');
+}
+
+/* 900 - Black */
+@font-face {
+  font-family: 'San Pransisco Pro Display';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url('dist/woff2/SanPransiscoProDisplay-Black.woff2') format('woff2'),
+       url('dist/ttf/SanPransiscoProDisplay-Black.ttf') format('truetype');
+}
+
+/* ==========================================================================
+   Italic Weights
+   ========================================================================== */
+
+/* 100 - Thin Italic */
+@font-face {
+  font-family: 'San Pransisco Pro Display';
+  font-style: italic;
+  font-weight: 100;
+  font-display: swap;
+  src: url('dist/woff2/SanPransiscoProDisplay-ThinItalic.woff2') format('woff2'),
+       url('dist/ttf/SanPransiscoProDisplay-ThinItalic.ttf') format('truetype');
+}
+
+/* 200 - Ultralight Italic */
+@font-face {
+  font-family: 'San Pransisco Pro Display';
+  font-style: italic;
+  font-weight: 200;
+  font-display: swap;
+  src: url('dist/woff2/SanPransiscoProDisplay-UltralightItalic.woff2') format('woff2'),
+       url('dist/ttf/SanPransiscoProDisplay-UltralightItalic.ttf') format('truetype');
+}
+
+/* 300 - Light Italic */
+@font-face {
+  font-family: 'San Pransisco Pro Display';
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url('dist/woff2/SanPransiscoProDisplay-LightItalic.woff2') format('woff2'),
+       url('dist/ttf/SanPransiscoProDisplay-LightItalic.ttf') format('truetype');
+}
+
+/* 400 - Regular Italic */
+@font-face {
+  font-family: 'San Pransisco Pro Display';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('dist/woff2/SanPransiscoProDisplay-RegularItalic.woff2') format('woff2'),
+       url('dist/ttf/SanPransiscoProDisplay-RegularItalic.ttf') format('truetype');
+}
+
+/* 500 - Medium Italic */
+@font-face {
+  font-family: 'San Pransisco Pro Display';
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url('dist/woff2/SanPransiscoProDisplay-MediumItalic.woff2') format('woff2'),
+       url('dist/ttf/SanPransiscoProDisplay-MediumItalic.ttf') format('truetype');
+}
+
+/* 600 - Semibold Italic */
+@font-face {
+  font-family: 'San Pransisco Pro Display';
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: url('dist/woff2/SanPransiscoProDisplay-SemiboldItalic.woff2') format('woff2'),
+       url('dist/ttf/SanPransiscoProDisplay-SemiboldItalic.ttf') format('truetype');
+}
+
+/* 700 - Bold Italic */
+@font-face {
+  font-family: 'San Pransisco Pro Display';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url('dist/woff2/SanPransiscoProDisplay-BoldItalic.woff2') format('woff2'),
+       url('dist/ttf/SanPransiscoProDisplay-BoldItalic.ttf') format('truetype');
+}
+
+/* 800 - Heavy Italic */
+@font-face {
+  font-family: 'San Pransisco Pro Display';
+  font-style: italic;
+  font-weight: 800;
+  font-display: swap;
+  src: url('dist/woff2/SanPransiscoProDisplay-HeavyItalic.woff2') format('woff2'),
+       url('dist/ttf/SanPransiscoProDisplay-HeavyItalic.ttf') format('truetype');
+}
+
+/* 900 - Black Italic */
+@font-face {
+  font-family: 'San Pransisco Pro Display';
+  font-style: italic;
+  font-weight: 900;
+  font-display: swap;
+  src: url('dist/woff2/SanPransiscoProDisplay-BlackItalic.woff2') format('woff2'),
+       url('dist/ttf/SanPransiscoProDisplay-BlackItalic.ttf') format('truetype');
+}
+
+/* ==========================================================================
+   CSS Fallback Stacks & Utility Classes
+   ========================================================================== */
+
+:root {
+  --font-san-pransisco: 'San Pransisco Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+.font-san-pransisco {
+  font-family: var(--font-san-pransisco);
+  letter-spacing: -0.015em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Apple HIG Dynamic Type Scale simulation */
+.display-large-title {
+  font-family: var(--font-san-pransisco);
+  font-size: 34px;
+  line-height: 41px;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+.display-title-1 {
+  font-family: var(--font-san-pransisco);
+  font-size: 28px;
+  line-height: 34px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.display-title-2 {
+  font-family: var(--font-san-pransisco);
+  font-size: 22px;
+  line-height: 28px;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+}
+
+.display-title-3 {
+  font-family: var(--font-san-pransisco);
+  font-size: 20px;
+  line-height: 25px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
